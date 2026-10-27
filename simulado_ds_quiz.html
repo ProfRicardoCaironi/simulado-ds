@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Simulado DS | Quiz Interativo</title>
+    
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <div class="logo">DS<span> / </span>QUIZ</div>
+        <div class="pill">Simulado Técnico • 50 questões</div>
+      </header>
+      <section id="intro">
+        <div class="hero">
+          <div class="tag">Preparação para avaliação teórica</div>
+          <h1>
+            Teste seus conhecimentos em
+            <span style="color: #6fe5cf">Desenvolvimento de Sistemas.</span>
+          </h1>
+          <p>
+            Um simulado interativo com questões de lógica, redes, banco de
+            dados, programação web, mobile, IoT, testes e metodologias de
+            desenvolvimento.
+          </p>
+        </div>
+        <div class="panel">
+          <div class="tag">Como funciona</div>
+          <div class="stats">
+            <div class="stat"><strong>50</strong><small>Questões</small></div>
+            <div class="stat">
+              <strong>0–10</strong><small>Nota final</small>
+            </div>
+            <div class="stat">
+              <strong>0,2</strong><small>Ponto por acerto</small>
+            </div>
+          </div>
+          <p>
+            Selecione uma alternativa e clique em <b>Confirmar resposta</b>. A
+            correção será exibida somente após a confirmação. Não será possível
+            alterar respostas confirmadas.
+          </p>
+          <button class="btn" id="start">Começar simulado →</button>
+        </div>
+      </section>
+      <section id="quiz" class="hidden">
+        <div class="panel">
+          <div class="topline">
+            <span id="counter"></span><span id="partial"></span>
+          </div>
+          <div class="track"><div class="fill" id="progress"></div></div>
+          <div class="section" id="section"></div>
+          <div class="question" id="question"></div>
+          <div class="context" id="context"></div>
+          <div class="choices" id="choices"></div>
+          <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+          <div class="actions">
+            <span class="muted" id="hint"
+              >Escolha uma alternativa para continuar.</span
+            ><button class="btn" id="confirm" disabled>
+              Confirmar resposta</button
+            ><button class="btn hidden" id="next">Próxima questão →</button>
+          </div>
+        </div>
+      </section>
+      <section id="result" class="hidden">
+        <div class="panel">
+          <div class="tag">Simulado concluído</div>
+          <h1>Seu resultado</h1>
+          <p id="summary"></p>
+          <div class="score" id="score"></div>
+          <div class="stats">
+            <div class="stat">
+              <strong id="hits"></strong><small>Acertos</small>
+            </div>
+            <div class="stat">
+              <strong id="misses"></strong><small>Erros</small>
+            </div>
+            <div class="stat">
+              <strong id="percent"></strong><small>Aproveitamento</small>
+            </div>
+          </div>
+          <button class="btn" id="restart">Refazer simulado ↻</button
+          ><button class="btn secondary" id="toggleReview">
+            Ver revisão das questões
+          </button>
+          <div class="review hidden" id="review"></div>
+        </div>
+      </section>
+      <footer>
+        Simulado de Desenvolvimento de Sistemas • Questões adaptadas do material
+        fornecido • Funciona offline
+      </footer>
+    </div>
+    <script src="./script.js">
+      
+    </script>
+  </body>
+</html>
